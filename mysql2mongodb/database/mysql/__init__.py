@@ -1,5 +1,4 @@
 import MySQLdb
-from ..base import Database
 
 class MysqlDatabase:
 

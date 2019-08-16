@@ -17,7 +17,7 @@ setup(
     url = "http://packages.python.org/mysql2mongo",
     packages=find_packages(),
     long_description=read('README.md'),
-    scripts=['scripts/mysql2mongo.py'],
+    scripts=['scripts/mysql2mongoDB'],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Programming Language :: Python :: 3.7",

@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+from mysql2mongodb.shell import MySql2MongoDBApp
+
+app = MySql2MongoDBApp()
+app.cmdloop()

@@ -8,11 +8,11 @@ class DatabaseFactory:
     """
 
     @staticmethod
-    def build(build, address="localhost", port=27017, user="foo", password="bar", database_name=None):
+    def build(build, address="localhost", user="foo", password="bar", database_name=None):
         if build == "mysql":
-            return MysqlDatabase(address=address, port=port, user=user, password=password, database_name=database_name)
+            return MysqlDatabase(address=address, user=user, password=password, database_name=database_name)
         elif build == "mongodb":
-            return MongoDatabase(address=address, port=port, user=user, password=password, database_name=database_name)
+            return MongoDatabase(address=address, user=user, password=password, database_name=database_name)
         else:
             return NullDatabase(address=address, port=port, user=user, password=password, database_name=database_name)
 
