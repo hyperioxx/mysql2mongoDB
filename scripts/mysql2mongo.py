@@ -1,4 +1,4 @@
-from mysql2mongodb.databases.mysql import Database
+from mysql2mongodb.database.mysql import Database
 
 
 
