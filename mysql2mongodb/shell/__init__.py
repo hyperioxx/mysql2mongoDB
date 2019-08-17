@@ -1,20 +1,28 @@
 #!/usr/bin/python3
-from cmd2 import Cmd
 import getpass
+import os
+from cmd2 import Cmd
 from mysql2mongodb.database import DatabaseFactory
+from mysql2mongodb.logging import Mysql2MongoLogging
 
 
 class MySql2MongoDBApp(Cmd):
     prompt = "mysql2mongoDB> "
     mysql = None
     mongo = None
+    
+    logger = Mysql2MongoLogging(filename = "mysql2mongoDB.log")
+    
 
     def do_mysql(self, args):
         """ 
         Test Command
         """
+        if args == "connect":
+            self._create_mysql_instance()
+        else:
+            print("please")
         print(args.arg_list)
-        
 
 
     def _create_mysql_instance(self):

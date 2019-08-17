@@ -1,5 +1,9 @@
 ![mysql2mongo](https://raw.githubusercontent.com/hyperioxx/mysql2mongo/master/logo/image.png "mysql2mongo")
 
+[![PyPI pyversions](https://img.shields.io/pypi/status/mysql2mongodb.svg)](https://pypi.org/project/mysql2mongodb/)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
+[![PyPI license](https://img.shields.io/pypi/l/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
+
 
 # What is It ?
 

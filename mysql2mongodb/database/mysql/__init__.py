@@ -1,8 +1,10 @@
 import MySQLdb
+from mysql2mongodb.logging import Mysql2MongoLogging
 
 class MysqlDatabase:
 
     def __init__(self, address="localhost", port=3306, user=None, password=None, database_name=None):
+        self._log = logging.getLogger(__name__)
         self._cursor = None
         self._connect(address=address, port=port, user=user, password=password, database_name=database_name)
         self._tables = self._get_tables()
@@ -16,10 +18,11 @@ class MysqlDatabase:
 
     def _connect(self, address="localhost", port=3306, user=None, password=None, database_name=None):
         try:
+            self._log.info("Starting connection to MySQL server: mysql://{}".format(address))
             self._db = MySQLdb.connect(host=address, user=user, passwd=password, port=port, db=database_name)
             self._cursor = self._db.cursor()
         except Exception as err:
-            print(err)
+            self._log.error(err)
 
     def _get_tables(self):
         temp_dict = {}
