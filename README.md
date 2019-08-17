@@ -4,6 +4,14 @@
 [![PyPI version shields.io](https://img.shields.io/pypi/v/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
 [![PyPI license](https://img.shields.io/pypi/l/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
 
+# STILL IN DEVELOPMENT!!
+
+# How to Install
+
+```
+pip install mysql2mongodb
+```
+
 
 # What is It ?
 
