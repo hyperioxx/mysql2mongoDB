@@ -2,5 +2,6 @@ language: python
 python:
   - "3.6"
 install:
+  - ls
   - pip install -r mysql2mongodb/requirements.txt
 script: ls 
