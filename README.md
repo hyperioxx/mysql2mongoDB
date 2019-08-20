@@ -3,6 +3,7 @@
 [![PyPI pyversions](https://img.shields.io/pypi/status/mysql2mongodb.svg)](https://pypi.org/project/mysql2mongodb/)
 [![PyPI version shields.io](https://img.shields.io/pypi/v/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
 [![PyPI license](https://img.shields.io/pypi/l/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/mysql2mongodb.svg)](https://pypi.python.org/pypi/mysql2mongodb/)
 [![Build](https://travis-ci.com/hyperioxx/mysql2mongoDB.svg?branch=master)](https://pypi.python.org/pypi/mysql2mongodb/)
 
 
