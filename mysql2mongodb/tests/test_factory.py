@@ -9,7 +9,7 @@ def mysql_init(self, address="localhost", port=3306, user=None, password=None, d
         :param address="localhost": 
         :param port=3306: 
         :param user=None: 
-        :param password=None: 
+        :param password=None:
         :param database_name=None: 
     """
     self._log = None
