@@ -1,4 +1,5 @@
 import MySQLdb
+import logging
 from mysql2mongodb.logging import Mysql2MongoLogging
 
 class MysqlDatabase:
