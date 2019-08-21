@@ -20,7 +20,4 @@ def mysql_init(self, address="localhost", port=3306, user=None, password=None, d
 
 def test_database_factory_mysql():
     mysql2mongodb.database.mysql.MysqlDatabase.__init__ = mysql_init
-    if type(DatabaseFactory.build('mysql')) == type(mysql2mongodb.database.mysql.MysqlDatabase()):
-        assert True
-    else:
-        assert False
+    assert (type(DatabaseFactory.build('mysql')) == type(mysql2mongodb.database.mysql.MysqlDatabase())), False
