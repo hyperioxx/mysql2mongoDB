@@ -2,4 +2,7 @@
 from mysql2mongodb.shell import MySql2MongoDBApp
 
 app = MySql2MongoDBApp()
-app.cmdloop()
+try:
+    app.cmdloop()
+except KeyboardInterrupt:
+    SystemExit(0)

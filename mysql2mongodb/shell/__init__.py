@@ -1,53 +1,35 @@
 #!/usr/bin/python3
 import getpass
 import os
-from cmd2 import Cmd
+import sqlparse
 from mysql2mongodb.database import DatabaseFactory
 from mysql2mongodb.logging import Mysql2MongoLogging
+from mysql2mongodb.compiler import Mysql2MongoDBCompiler
 
 
-class MySql2MongoDBApp(Cmd):
+class MySql2MongoDBApp:
     prompt = "mysql2mongoDB> "
-    mysql = None
-    mongo = None
     
     logger = Mysql2MongoLogging(filename = "mysql2mongoDB.log")
+
+    def pre_command(self, arg):
+        pass
     
-
-    def do_mysql(self, args):
-        """ 
-        Test Command
-        """
-        if args == "connect":
-            self._create_mysql_instance()
-        else:
-            print("please")
-        print(args.arg_list)
-
-
-    def _create_mysql_instance(self):
-        database_name = input("database name: ")
-        address = input("address: ")
-        port = input("port(default 3306):  ")
-        user = input("mysql user:")
-        password = getpass.getpass("Password: ")
-        self.mysql = DatabaseFactory.build('mysql',address=address, user=user, password=password, database_name=database_name)
-        print("success...")
-
-
+    def post_command(self, arg):
+        pass
     
-        
+    def execute_command(self, arg):
+        try:
+            Mysql2MongoDBCompiler(sql=arg).compile()
+        except IndexError:
+            pass
 
-    def do_connect_mongodb(self, args):
-        """ 
-        Test Command
-        """
-        database_name = input("database name: ")
-        address = input("address: ")
-        port = input("port(default 3306):  ")
-        user = input("mysql user:")
-        password = getpass.getpass("Password: ")
-        self.mongo = None
+    def cmdloop(self):
+        while True:
+            _input = input(self.prompt)
+            self.pre_command(_input)
+            self.execute_command(_input)
+            self.post_command(_input)
 
     
 
